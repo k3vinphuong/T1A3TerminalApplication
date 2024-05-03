@@ -1,11 +1,15 @@
-import json
+# System packages
 
+# External packages
+from colored import Fore, Back, Style
+
+# Imports from own functions
 from todo_functions import load_data,show_watchlist,add_movie,add_tv_series
 
 def main():
     data = load_data()
     while True:
-        print("\n===== Movie/TV Series Checklist =====")
+        print(f"{Fore.blue}{Back.green}\n===== Movie/TV Series Checklist =====")
         print("1. Show Watchlist")
         print("2. Add Movie")
         print("3. Add TV Series")
