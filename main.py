@@ -2,7 +2,7 @@
 from colored import Fore, Back, Style
 
 # Imports from own functions
-from src.todo_functions import load_data,show_watchlist,add_movie,add_tv_series
+from todo_functions import load_data,show_watchlist,add_movie,add_tv_series
 
 # Main screen menu with all the options
 def main():
