@@ -2,7 +2,7 @@
 from colored import Fore, Back, Style
 
 # Imports from own functions
-from todo_functions import load_data,show_watchlist,add_movie,add_tv_series
+from todo_functions import load_data,show_watchlist,add_movie,add_tv_series,delete_movie,delete_tv_series
 
 # Main screen menu with all the options
 def main():
@@ -12,7 +12,9 @@ def main():
         print("1. Show Watchlist")
         print("2. Add Movie")
         print("3. Add TV Series")
-        print("4. Exit")
+        print("4. Delete Movie")
+        print("5. Delete TV Series")
+        print("6. Exit")
         choice = input("Enter your choice: ")
 
         # Choices and the command to activate them
@@ -23,6 +25,12 @@ def main():
         elif choice == "3":
             add_tv_series(data)
         elif choice == "4":
+            idx = int(input("Enter the index of the movie to delete: ")) - 1
+            delete_movie(data, idx)
+        elif choice == "5":
+            idx = int(input("Enter the index of the TV series to delete: ")) - 1
+            delete_tv_series(data, idx)
+        elif choice == "6":
             print("Exiting...")
             break
         else:

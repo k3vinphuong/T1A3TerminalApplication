@@ -42,3 +42,22 @@ def add_tv_series(data):
     data["tv_series"].append({"title": title, "rating": rating, "completed": completed})
     save_data(data)
     print("TV series added successfully!")
+
+# Deletes the movie through the index chosen 
+def delete_movie(data, idx):
+    try:
+        del data["movies"][idx]
+        save_data(data)
+        print("Movie deleted successfully!")
+    # prints an error if an index is incorrectly chosen
+    except IndexError:
+        print("Invalid movie index!")
+
+# delete a tv series through index chosen
+def delete_tv_series(data, idx):
+    try:
+        del data["tv_series"][idx]
+        save_data(data)
+        print("TV series deleted successfully!")
+    except IndexError:
+        print("Invalid TV series index!")
